@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @layer base {
+  h2 {
+    @apply text-[1.5rem];
+  }
+}
+body {
+  @apply text-light font-Montserrat text-[1.5rem] overflow-hidden leading-[1.4];
+}
+img {
+  @apply max-w-full w-full;
+} */
+
+.container {
+  @apply max-w-[80rem] w-full p-5 mx-auto;
+}
+
+@layer components {
+  .header {
+    @apply z-50 fixed w-[100%];
+  }
+  .header a {
+    @apply text-light;
+  }
+  .header .branding img {
+    @apply w-7;
+  }
+  .header .header__brand a {
+    @apply flex items-center gap-3;
+  }
+  .header .header__brand h3 {
+    @apply text-light;
+  }
+  .header .header__actions {
+    @apply hidden;
+  }
+  .header .header__nav {
+    @apply z-50 duration-300 flex flex-col absolute h-0 overflow-y-scroll bg-l-dark left-0 top-[4rem] w-full;
+  }
+  .header .header__nav.open {
+    @apply h-[24.5rem] duration-300;
+  }
+  .header .header__nav li {
+    @apply py-3 px-5;
+  }
+  .header .header__nav li a {
+    @apply text-[1rem];
+  }
+  .header .toggle__menu {
+    @apply cursor-pointer flex items-center flex-col gap-1 bg-primary p-2 rounded-md;
+  }
+  .header .toggle__menu span {
+    @apply w-6 h-[.1rem] bg-light block rounded-full;
+  }
+  .header .header__wrapper {
+    @apply flex items-center justify-between;
+  }
+}
+
+/* version */
+
+.version {
+  @apply bg-dark pt-16;
+}
+.version p {
+  @apply text-light text-center;
+}
+.version a {
+  @apply text-primary underline;
+}
+.version a:hover {
+  @apply no-underline;
+}
+
+/* Banner */
+
+.banner .container {
+  @apply pb-0;
+}
+.banner .banner__wrapper {
+  @apply flex flex-col justify-center items-center;
+}
+.banner .banner__text h1 {
+  @apply text-5xl text-center;
+}
+.banner .banner__action {
+  @apply flex;
+}
+.banner .download__button {
+  @apply text-center bg-primary mr-[.11rem] p-2 w-[16.7rem] text-light;
+}
+.banner .download__button small {
+  @apply block;
+}
+.banner .banner__text .chevron {
+  @apply bg-primary py-3 w-11 flex items-center justify-center cursor-pointer;
+}
+.banner .banner__text .chevron i {
+  @apply text-light text-[1.2rem];
+}
+.banner .dropdown {
+  @apply z-50 hidden absolute bg-light w-[20.5rem] h-[12rem] border-2 border-primary;
+}
+.banner .dropdown.open {
+  @apply block bg-light w-fit h-fit border-2 border-primary;
+}
+.banner .dropdown table {
+  @apply w-[20.2rem];
+}
+.banner .dropdown .header {
+  @apply w-10 py-1 text-sm;
+}
+.banner .dropdown .arrow {
+  @apply text-center;
+}
+.banner .dropdown .text {
+  @apply text-sm;
+}
+.banner .dropdown p {
+  @apply pl-12 p-2;
+}
+.banner .dropdown .bottom {
+  @apply text-sm text-primary;
+}
+.banner .dropdown td:last-child {
+  @apply bg-l-light;
+}
+.banner .banner__text .banner__balloon {
+  @apply relative text-light bg-dark text-center text-sm py-2 mt-3 rounded-lg;
+}
+.banner .banner__text .banner__balloon:after {
+  @apply content-[''] bg-dark h-4 w-4 absolute top-[-.4rem] right-[1rem] rotate-45;
+}
+.banner .banner__text .banner__balloon a {
+  @apply text-primary;
+}
+.banner .banner__text .banner__balloon a:hover {
+  @apply underline;
+}
+.banner .banner__text .license {
+  @apply text-primary text-sm;
+}
+.banner .banner__text .license:hover {
+  @apply underline;
+}
+
+/* Services */
+
+.services .services__wrapper {
+  @apply flex flex-col items-center p-4;
+}
+.services .services__image {
+  @apply w-[17rem];
+}
+.services .services__text h4 {
+  @apply text-[1.2rem] mb-8;
+}
+.services .services__content {
+  @apply py-9;
+}
+.services .services__content .services__text a {
+  @apply text-primary;
+}
+.services .services__content .services__text a:hover {
+  @apply underline;
+}
+
+.services .services__content:nth-child(even) {
+  @apply bg-ll-light;
+}
+.services .services__content:nth-child(4) .services__image {
+  @apply mb-4 scale-90 ease-out duration-300;
+}
+.services .services__content:nth-child(4) .services__image:hover {
+  @apply scale-100;
+}
+
+@layer utilities {
+  .btn {
+    @apply inline-block px-3 py-1 border-[1px];
+  }
+  .btn.bg--blue {
+    @apply bg-primary border-0;
+  }
+}

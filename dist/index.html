@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./output.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+
+    <header class="header bg-l-dark">
+      <div class="container">
+        <div class="header__wrapper">
+          <div class="branding">
+            <div class="header__brand">
+              <a href="">
+                <img src="../images/logo.png" alt="" />
+                <h3>Visual Studio Code</h3>
+              </a>
+            </div>
+            <ul class="header__nav">
+              <li><a href="">Docs</a></li>
+              <li><a href="">Updates</a></li>
+              <li><a href="">Blog</a></li>
+              <li><a href="">API</a></li>
+              <li><a href="">Extensions</a></li>
+              <li><a href="">FAQ</a></li>
+              <li><a href="">Learn</a></li>
+              <li><a href="">Search</a></li>
+              <li class="btn bg--blue"><a href="">Download</a></li>
+            </ul>
+          </div>
+          <div class="header__actions">
+            <div class="header__input">
+              <i></i>
+              <input type="submit" placeholder="Search" />
+            </div>
+            <a href="">Download</a>
+          </div>
+          <div class="toggle__menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Version -->
+
+    <section class="version">
+      <div class="container">
+        <div class="version__wrapper">
+          <div class="version__text">
+            <p>
+              <a href="">Version 1.82</a> is now available! Read about the new
+              features and fixes from August.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Banner -->
+
+    <section class="banner bg-l-dark">
+      <div class="container">
+        <div class="banner__wrapper">
+          <div class="banner__text">
+            <h1 class="text-light mb-3">
+              Code editing.<br /><strong>Redefined.</strong>
+            </h1>
+            <p class="text-light mb-4 text-center">
+              Free. Built on open source. Runs everywhere.
+            </p>
+
+            <div class="banner__action flex justify-center">
+              <div class="download__button">
+                <a href=""
+                  >Download for Windows
+                  <small>Stable Build</small>
+                </a>
+              </div>
+
+              <div class="chevron">
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+            </div>
+
+            <div class="dropdown">
+              <table>
+                <thead>
+                  <tr>
+                    <td class="col"></td>
+                    <td class="col"></td>
+                    <td class="header p-4">Stable</td>
+                    <td class="header p-2">Insiders</td>
+                  </tr>
+                </thead>
+                <thead>
+                  <tr>
+                    <td class="text pl-2"><strong>macOS</strong></td>
+                    <td class="text text-start">Universal</td>
+                    <td class="arrow text-primary">
+                      <a href=""><i class="fa-solid fa-arrow-down"></i></a>
+                    </td>
+                    <td class="arrow">
+                      <a href=""><i class="fa-solid fa-arrow-down"></i></a>
+                    </td>
+                  </tr>
+                </thead>
+                <thead>
+                  <tr>
+                    <td class="text pl-2"><strong>Windows x64</strong></td>
+                    <td class="text text-start">User Installer</td>
+                    <td class="arrow text-primary">
+                      <a href=""><i class="fa-solid fa-arrow-down"></i></a>
+                    </td>
+                    <td class="arrow">
+                      <a href=""><i class="fa-solid fa-arrow-down"></i></a>
+                    </td>
+                  </tr>
+                </thead>
+                <thead>
+                  <tr>
+                    <td class="text pl-2"><strong>Linux x64</strong></td>
+                    <td class="text text-start">.deb<br />.rpm</td>
+                    <td class="arrow text-primary">
+                      <a href=""><i class="fa-solid fa-arrow-down"></i></a>
+                    </td>
+                    <td class="arrow">
+                      <a href=""><i class="fa-solid fa-arrow-down"></i></a>
+                    </td>
+                  </tr>
+                </thead>
+              </table>
+              <p class="other">
+                <a href="" class="bottom">Other downloads</a> or
+                <a href="" class="bottom">open on web</a>
+              </p>
+            </div>
+            <div class="banner__balloon mb-3">
+              <p>
+                <a href="">Web</a>,<a href="">Insider's edition</a>, or
+                <a href="">other platforms</a>
+              </p>
+            </div>
+            <p class="text-light text-sm text-center">
+              By using VS Code, you agree to its
+            </p>
+            <a href="" class="license flex justify-center"
+              >license and privacy statement.</a
+            >
+          </div>
+          <div class="banner__image">
+            <img src="../images/home-screenshot-win-lg.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Value Props -->
+
+    <!-- Services -->
+
+    <section class="services">
+      <div class="services__content">
+        <div class="services__wrapper">
+          <div class="services__image">
+            <img src="../images/home-intellisense.svg" alt="" />
+          </div>
+          <div class="services__text">
+            <h4>Meet IntelliSense.</h4>
+            <p>
+              Go beyond syntax highlighting and autocomplete with IntelliSense,
+              which provides smart completions based on variable types, function
+              definitions, and imported modules.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="services__content">
+        <div class="services__wrapper">
+          <div class="services__image">
+            <img src="../images/home-debug.svg" alt="" />
+          </div>
+          <div class="services__text">
+            <h4>Print statement debugging is a thing of the past.</h4>
+            <p>
+              Debug code right from the editor. Launch or attach to your running
+              apps and debug with break points, call stacks, and an interactive
+              console.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="services__content">
+        <div class="services__wrapper">
+          <div class="services__image">
+            <img src="../images/home-git.svg" alt="" />
+          </div>
+          <div class="services__text">
+            <h4>Git commands built-in.</h4>
+            <p>
+              Working with Git and other SCM providers has never been easier.
+              Review diffs, stage files, and make commits right from the editor.
+              Push and pull from any hosted SCM service.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="services__content">
+        <div class="services__wrapper">
+          <div class="services__image">
+            <a href=""
+              ><img src="../images/Hundreds-of-Extensions.png" alt=""
+            /></a>
+          </div>
+          <div class="services__text">
+            <h4>Extensible and customizable.</h4>
+            <p>
+              Want even more features? Install extensions to add new languages,
+              themes, debuggers, and to connect to additional services.
+              Extensions run in separate processes, ensuring they won't slow
+              down your editor. <a href="">Learn more about extensions.</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="services__content">
+        <div class="services__wrapper">
+          <div class="services__image">
+            <img src="../images/home-azure.svg" alt="" />
+          </div>
+          <div class="services__text">
+            <h4>Deploy with confidence and ease</h4>
+            <p>
+              With <a href="">Microsoft Azure</a> you can deploy and host your
+              React, Angular, Vue, Node, Python (and more!) sites, store and
+              query relational and document based data, and scale with
+              serverless computing, all with ease,
+              <a href="">all from within VS Code.</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
