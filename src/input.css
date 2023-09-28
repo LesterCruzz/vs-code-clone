@@ -22,10 +22,22 @@ img {
 
 @layer components {
   .header {
-    @apply z-50 fixed w-[100%];
+    position: relative;
+    width: 100%;
+    z-index: 999;
+    transition: ease-in;
   }
+  /* .header.blue {
+    @apply bg-blue-600 fixed duration-300;
+  } */
   .header a {
     @apply text-light;
+  }
+  .header .container {
+    @apply lg:p-0;
+  }
+  .header .branding {
+    @apply flex lg:items-center;
   }
   .header .branding img {
     @apply w-7;
@@ -34,13 +46,35 @@ img {
     @apply flex items-center gap-3;
   }
   .header .header__brand h3 {
-    @apply text-light;
+    @apply text-light lg:w-[11rem];
   }
   .header .header__actions {
-    @apply hidden;
+    @apply hidden lg:flex lg:items-center;
+  }
+  .header .header__actions .header__input {
+    @apply lg:bg-l-gray lg:px-3;
+  }
+  .header .header__actions .header__input:hover {
+    @apply lg:bg-ll-gray border border-light;
+  }
+  .header .header__actions .header__input input {
+    @apply lg:h-12 lg:p-2 lg:bg-transparent lg:text-light lg:outline-none;
+  }
+  .header .header__actions a:last-child {
+    @apply lg:bg-primary lg:h-12 lg:flex lg:items-center p-3;
+  }
+  .header .header__download {
+    @apply lg:flex lg:items-center bg-primary px-3;
   }
   .header .header__nav {
-    @apply z-50 duration-300 flex flex-col absolute h-0 overflow-y-scroll bg-l-dark left-0 top-[4rem] w-full;
+    @apply z-50 duration-300 flex flex-col absolute h-0 overflow-y-scroll bg-l-dark left-0 top-[4rem] w-full
+    lg:static lg:h-fit lg:overflow-hidden lg:flex-row;
+  }
+  .header .header__nav li:nth-child(8) {
+    @apply hidden;
+  }
+  .header .header__nav .btn {
+    @apply hidden;
   }
   .header .header__nav.open {
     @apply h-[24.5rem] duration-300;
@@ -49,10 +83,13 @@ img {
     @apply py-3 px-5;
   }
   .header .header__nav li a {
-    @apply text-[1rem];
+    @apply text-[1rem] lg:text-gray;
+  }
+  .header .header__nav li a:hover {
+    @apply lg:text-light;
   }
   .header .toggle__menu {
-    @apply cursor-pointer flex items-center flex-col gap-1 bg-primary p-2 rounded-md;
+    @apply cursor-pointer flex items-center flex-col gap-1 bg-primary p-2 rounded-md lg:hidden;
   }
   .header .toggle__menu span {
     @apply w-6 h-[.1rem] bg-light block rounded-full;
@@ -65,7 +102,7 @@ img {
 /* version */
 
 .version {
-  @apply bg-dark pt-16;
+  @apply bg-dark;
 }
 .version p {
   @apply text-light text-center;
@@ -83,7 +120,10 @@ img {
   @apply pb-0;
 }
 .banner .banner__wrapper {
-  @apply flex flex-col justify-center items-center;
+  @apply flex flex-col justify-center items-center lg:items-start lg:p-8;
+}
+.banner .banner__text {
+  @apply lg:p-8;
 }
 .banner .banner__text h1 {
   @apply text-5xl text-center;
@@ -104,7 +144,7 @@ img {
   @apply text-light text-[1.2rem];
 }
 .banner .dropdown {
-  @apply z-50 hidden absolute bg-light w-[20.5rem] h-[12rem] border-2 border-primary;
+  @apply z-40 hidden absolute bg-light w-[20.5rem] h-[12rem] border-2 border-primary;
 }
 .banner .dropdown.open {
   @apply block bg-light w-fit h-fit border-2 border-primary;
@@ -149,19 +189,61 @@ img {
   @apply underline;
 }
 
+/* Tweet */
+
+.tweet .tns-slide-active {
+  @apply lg:flex;
+}
+.tweet {
+  @apply py-16;
+}
+.tns-outer {
+  @apply relative;
+}
+.tns-controls {
+  @apply absolute top-[50%] w-full flex justify-between z-50;
+}
+.tns-item {
+  @apply flex;
+}
+.tweet .tweet__content {
+  @apply relative max-w-[22rem] mb-4 m-auto;
+}
+.tweet .tweet__content .tweet__logo i {
+  @apply text-gray absolute right-0 top-2;
+}
+.tweet .tweet__image img {
+  @apply absolute w-[4rem] h-[4rem] rounded-[50%] shadow-[2px_2px_2px_0_rgba(0,0,0,.2)];
+}
+.tweet .tweet__text {
+  @apply pl-20 pt-3;
+}
+.tweet .tweet__text h5 {
+  @apply text-sm;
+}
+.tweet .tweet__text small {
+  @apply text-xs;
+}
+.tweet .tweet__text p a {
+  @apply text-primary;
+}
+
 /* Services */
 
 .services .services__wrapper {
-  @apply flex flex-col items-center p-4;
+  @apply flex items-center lg:max-w-[80rem] lg:mx-auto lg:gap-8 justify-center;
 }
 .services .services__image {
-  @apply w-[17rem];
+  @apply w-[17rem] lg:w-[22.5rem];
+}
+.services .services__text {
+  @apply lg:w-[36rem];
 }
 .services .services__text h4 {
   @apply text-[1.2rem] mb-8;
 }
 .services .services__content {
-  @apply py-9;
+  @apply py-9 lg:pt-16;
 }
 .services .services__content .services__text a {
   @apply text-primary;
@@ -170,6 +252,9 @@ img {
   @apply underline;
 }
 
+.services__content:nth-child(even) .services__wrapper {
+  @apply lg:flex-row-reverse;
+}
 .services .services__content:nth-child(even) {
   @apply bg-ll-light;
 }

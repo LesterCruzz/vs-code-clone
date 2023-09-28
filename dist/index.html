@@ -10,6 +10,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css"
+    />
   </head>
   <body>
     <!-- Header -->
@@ -38,10 +42,14 @@
           </div>
           <div class="header__actions">
             <div class="header__input">
-              <i></i>
-              <input type="submit" placeholder="Search" />
+              <a href=""
+                ><i class="fa-solid fa-magnifying-glass text-light"></i></a
+              ><input type="text" placeholder="Search" />
             </div>
-            <a href="">Download</a>
+            <div class="header__download">
+              <a href=""><i class="fa-solid fa-arrow-down"></i></a
+              ><a href="">Download</a>
+            </div>
           </div>
           <div class="toggle__menu">
             <span></span>
@@ -71,7 +79,7 @@
 
     <section class="banner bg-l-dark">
       <div class="container">
-        <div class="banner__wrapper">
+        <div class="banner__wrapper lg:!flex-row sm:flex-col">
           <div class="banner__text">
             <h1 class="text-light mb-3">
               Code editing.<br /><strong>Redefined.</strong>
@@ -167,11 +175,131 @@
 
     <!-- Value Props -->
 
+    <!-- Tweet -->
+
+    <section class="tweet bg-ll-light">
+      <div class="container">
+        <div class="tweet__wrapper">
+          <div class="tweet__page">
+            <div class="tweet__content">
+              <div class="tweet__logo">
+                <i class="fa-brands fa-twitter"></i>
+              </div>
+              <div class="tweet__image">
+                <img src="../images/Una.jpg" alt="" />
+              </div>
+              <div class="tweet__text">
+                <h5><strong>Una Kravets</strong></h5>
+                <small>@Una</small>
+                <p>
+                  VS <a href="">@code</a> does so many things right. I’m
+                  constantly impressed by the UX, and customizing workspace /
+                  user preferences is no exception. 🙌🏼💯 It just keeps getting
+                  better ❤️
+                </p>
+              </div>
+            </div>
+            <div class="tweet__content">
+              <div class="tweet__logo">
+                <i class="fa-brands fa-twitter"></i>
+              </div>
+              <div class="tweet__image">
+                <img src="../images/jadbox.jpg" alt="" />
+              </div>
+              <div class="tweet__text">
+                <h5><strong>Jonathan Dunlap</strong></h5>
+                <small>@jadbox</small>
+                <p>
+                  VS Code will have deep remote development. You can connect to
+                  a container running a different OS and use any VS Code
+                  plugins, linting, debugging for that environment. 🔥🔥🔥
+                </p>
+              </div>
+            </div>
+            <div class="tweet__content">
+              <div class="tweet__logo">
+                <i class="fa-brands fa-twitter"></i>
+              </div>
+              <div class="tweet__image">
+                <img src="../images/PKodmad.jpg" alt="" />
+              </div>
+              <div class="tweet__text">
+                <h5>
+                  <strong><a href="">Pavithra Kodmad</a></strong>
+                </h5>
+                <small>@PKodmad</small>
+                <p>
+                  VS Code is my most used and favorite editor. I love being able
+                  to customize the editor - changing the layout, the icons,
+                  fonts and color scheme is so easy!
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="tweet__page">
+            <div class="tweet__content">
+              <div class="tweet__logo">
+                <i class="fa-brands fa-twitter"></i>
+              </div>
+              <div class="tweet__image">
+                <img src="../images/MrDarrenV.jpg" alt="" />
+              </div>
+              <div class="tweet__text">
+                <h5><strong>Darren</strong></h5>
+                <small>@MrDarrenV</small>
+                <p>
+                  Just as I thought <a href="">@code</a> couldn't get better,
+                  out comes its Remote Development plugins that let you remote
+                  into containers as a dev environment! 😍
+                </p>
+              </div>
+            </div>
+            <div class="tweet__content">
+              <div class="tweet__logo">
+                <i class="fa-brands fa-twitter"></i>
+              </div>
+              <div class="tweet__image">
+                <img src="../images/cassidoo.jpg" alt="" />
+              </div>
+              <div class="tweet__text">
+                <h5><strong>Cassidy Williams</strong></h5>
+                <small>@cassidoo</small>
+                <p>
+                  I was a vim fan, but then discovered VS Code's Vim plugin,
+                  which lets me add in my vim keybindings. I can maintain my
+                  coding style without having to compromise on speed.
+                </p>
+              </div>
+            </div>
+            <div class="tweet__content">
+              <div class="tweet__logo">
+                <i class="fa-brands fa-twitter"></i>
+              </div>
+              <div class="tweet__image">
+                <img src="../images/lauragift21.jpg" alt="" />
+              </div>
+              <div class="tweet__text">
+                <h5>
+                  <strong><a href="">Gift Egwuenu</a></strong>
+                </h5>
+                <small>@lauragift21</small>
+                <p>
+                  I love <a href="">@code</a> The built-in markdown previewer is
+                  awesome and the plugin system allows me to use GitLens, which
+                  makes my workflow so much easier.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Services -->
 
     <section class="services">
       <div class="services__content">
-        <div class="services__wrapper">
+        <div class="services__wrapper  ">
           <div class="services__image">
             <img src="../images/home-intellisense.svg" alt="" />
           </div>
@@ -253,5 +381,26 @@
     </section>
 
     <script src="./script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <script type="module">
+      // import {tns} from './src/tiny-slider.js';
+
+      var slider = tns({
+        container: ".tweet__wrapper",
+        items: 1,
+        slideBy: "page",
+        autoplay: false,
+        axis: "horizontal",
+        controlsText: [
+          '<i class="fa-solid fa-chevron-left"></i>',
+          '<i class="fa-solid fa-chevron-right"></i>',
+        ],
+        responsive: {
+          1024: {
+            items: 1,
+          },
+        },
+      });
+    </script>
   </body>
 </html>
